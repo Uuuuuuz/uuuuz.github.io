@@ -1,63 +1,29 @@
-[Hux Blog](https://huangxuan.me)
-================================
+# 平行时空影业 · 地图制作组
 
-> I never expected this to become popular.
+Parallel Spacetime Pictures：一支 CS2 创意工坊地图制作组的介绍网站。
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
+网址：<https://uuuuuuz.github.io/uuuuz.github.io/>
 
+## 目录结构
 
-[User Manual 👉](_doc/Manual.md)
---------------------------------------------------
-
-### Getting Started
-
-1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
-
-2. Installed dependencies in the `Gemfile`:
-
-```sh
-$ bundle install 
+```
+index.html          首页（唯一的页面）
+404.html            找不到页面时显示
+favicon.svg         网站图标
+assets/css/style.css  样式
+assets/js/main.js     交互、成员岗位列表、报名表配置
+assets/img/           配图（程序生成的原创图片）
+.nojekyll           告诉 GitHub Pages 直接发布静态文件，不经过 Jekyll
 ```
 
-3. Serve the website (`localhost:4000` by default):
+## 常见修改
+
+- **改招募岗位**：编辑 `assets/js/main.js` 顶部的 `ROLES`，成员卡片和报名表选项会一起更新。
+- **开通报名表**：在 `assets/js/main.js` 顶部的 `APPLY_CONFIG.endpoint` 填上接收数据的地址。留空时表单显示「报名通道即将开放」。
+- **改文字**：直接编辑 `index.html`。
+
+## 本地预览
 
 ```sh
-$ bundle exec jekyll serve  # alternatively, npm start
+npx http-server .
 ```
-
-### Development (Build From Source)
-
-To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
-
-Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
-
-Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
-
-This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
-
-
-### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
-
-
-Other Resources
----------------
-
-Ports
-- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
-
-[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
-- Out of date. Helps wanted for updating it on par with the main repo
-
-Translation
-- [🇨🇳  中文文档（有点过时）](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
-
-
-License
--------
-
-Apache License 2.0.
-Copyright (c) 2015-present Huxpro
-
-Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
-Copyright (c) 2013-2016 Blackrock Digital LLC.

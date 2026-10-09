@@ -1,46 +1,223 @@
----
-layout: page
-description: "「离开世界之前 一切都是过程」"
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>平行时空影业 · 地图制作组</title>
+  <meta name="description" content="平行时空影业是一支 CS2 创意工坊地图制作组。我们把每张地图当作一部电影来拍。成员招募中，虚位以待。">
+  <meta name="theme-color" content="#05060f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="平行时空影业 · 地图制作组">
+  <meta property="og:description" content="在另一个时空，搭建另一个世界。成员招募中，虚位以待。">
+  <meta property="og:image" content="https://uuuuuuz.github.io/uuuuz.github.io/assets/img/og.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/img/hero.jpg" as="image">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
+  <!-- 导航 -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="平行时空影业 首页">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5ee7ff"/>
+              <stop offset=".5" stop-color="#9b7bff"/>
+              <stop offset="1" stop-color="#ff6fb5"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12" cy="16" r="8.5" fill="none" stroke="url(#lg)" stroke-width="2.4"/>
+          <circle cx="20" cy="16" r="8.5" fill="none" stroke="url(#lg)" stroke-width="2.4" opacity=".75"/>
+        </svg>
+        <span>平行时空影业</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">关于我们</a>
+        <a href="#services">我们做什么</a>
+        <a href="#works">作品</a>
+        <a href="#team">成员</a>
+        <a href="#join" class="nav-cta">加入我们</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 首屏 -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Parallel Spacetime Pictures</span>
+        <h1>平行时空影业</h1>
+        <p class="sub">地图制作组</p>
+        <p class="tagline">在另一个时空，搭建另一个世界。<br>我们把每一张地图，都当作一部电影来拍。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#join">加入我们</a>
+          <a class="btn" href="#about">了解更多</a>
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="向下滚动"></a>
+    </section>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+    <!-- 关于 -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <span class="kicker">About Us</span>
+          <h2>每一张地图，<br>都是一个<span class="grad-text">平行时空</span></h2>
+          <p><strong>平行时空影业</strong>是一支专注于 <strong>CS2 创意工坊地图</strong>的制作组。</p>
+          <p>我们相信好地图不只是好看的场景。它要有世界观、有剧情、有节奏起伏，有让人屏住呼吸的高潮，也藏着只有细心玩家才能发现的彩蛋和隐藏结局。</p>
+          <p>制作组刚刚成立，第一张地图还在筹备中，每一个位置都还空着，等你来填。</p>
+          <div class="stats">
+            <div class="stat"><b class="grad-text">筹备中</b><span>首部作品</span></div>
+            <div class="stat"><b class="grad-text">虚位以待</b><span>核心成员</span></div>
+            <div class="stat"><b class="grad-text">∞</b><span>平行时空</span></div>
+          </div>
+        </div>
+        <figure class="about-visual reveal">
+          <img src="assets/img/terrain.jpg" alt="霓虹线框地形延伸向地平线上的紫色星球" loading="lazy" width="1600" height="1000">
+          <figcaption>WORLD 01 · 构想中</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 业务 -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">What We Do</span>
+          <h2>从一张白纸到一个世界</h2>
+          <p>一张完整的地图，需要不同手艺的人一起完成。</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></svg></div>
+            <h3>关卡设计</h3>
+            <p>规划路线、节奏和难度曲线，让每一段逃亡、每一次防守都紧张又公平。</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></div>
+            <h3>场景美术</h3>
+            <p>建模、材质、光影与氛围，把脑海里的画面变成玩家能走进去的世界。</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+            <h3>脚本机关</h3>
+            <p>用 cs_script 实现机关、Boss 战、自定义界面、地图存档和隐藏结局。</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 5v4M12 5v4M17 5v4"/></svg></div>
+            <h3>剧情演出</h3>
+            <p>世界观、台词、过场演出与配乐音效，让一局游戏像看完一部电影。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 作品 -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Works</span>
+          <h2>作品</h2>
+        </div>
+        <div class="works-box reveal">
+          <div class="film">REEL 01 · COMING SOON</div>
+          <h3>第一部作品，正在另一个时空里成形</h3>
+          <p>首张地图还在构思中。等它上线创意工坊，这里会第一时间放出预告。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 成员 -->
+    <section class="section services" id="team">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">The Crew</span>
+          <h2>成员 · <span class="grad-text">虚位以待</span></h2>
+          <p>下面每一个位置都还空着。也许其中一个，就是为你留的。</p>
+        </div>
+        <div class="members" id="members"></div>
+      </div>
+    </section>
+
+    <!-- 加入 -->
+    <section class="section join" id="join">
+      <div class="join-bg" aria-hidden="true"></div>
+      <div class="container join-grid">
+        <div class="join-info reveal">
+          <span class="kicker">Join Us</span>
+          <h2>穿过这道门，<br>来<span class="grad-text">另一个时空</span>造世界</h2>
+          <p style="color: var(--text-2)">不要求你是大神，只要你喜欢 CS2 地图，愿意一起把一个想法做到上线。</p>
+          <ul>
+            <li><b>新手友好：</b>会一点 Hammer、建模、写代码或写故事，都欢迎；不会也可以从零学起。</li>
+            <li><b>作品署名：</b>参与制作的每张地图都会署上你的名字。</li>
+            <li><b>自由时间：</b>线上协作，按自己的节奏参与。</li>
+            <li><b>一起成长：</b>组内分享经验，从第一张地图开始积累作品集。</li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="applyForm" novalidate>
+          <h3>报名表</h3>
+          <p class="hint">填好后提交，我们会尽快通过你留下的联系方式联系你。</p>
+          <p class="notice" id="formNotice" hidden>报名通道即将开放，敬请期待。</p>
+
+          <div class="row">
+            <div class="field">
+              <label for="f-name">称呼 <span class="req">*</span></label>
+              <input type="text" id="f-name" name="name" maxlength="40" required autocomplete="nickname" placeholder="怎么称呼你">
+            </div>
+            <div class="field">
+              <label for="f-contact">联系方式 <span class="req">*</span></label>
+              <input type="text" id="f-contact" name="contact" maxlength="80" required placeholder="QQ / 微信 / 邮箱">
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend>想负责的方向 <span class="req" style="color: var(--pink)">*</span></legend>
+            <div class="chips" id="roleChips"></div>
+          </fieldset>
+
+          <div class="row">
+            <div class="field">
+              <label for="f-exp">相关经验</label>
+              <select id="f-exp" name="experience">
+                <option value="零基础，想学">零基础，想学</option>
+                <option value="做过一点">做过一点</option>
+                <option value="做过完整地图或作品">做过完整地图或作品</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-link">作品链接</label>
+              <input type="url" id="f-link" name="link" maxlength="300" placeholder="创意工坊 / B站 / 网盘（选填）">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-intro">介绍一下自己</label>
+            <textarea id="f-intro" name="intro" maxlength="1000" placeholder="会什么、想做什么样的地图、每周大概能投入多少时间……"></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit" id="submitBtn">提交报名</button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> 平行时空影业 · 地图制作组</span>
+      <span>Parallel Spacetime Pictures</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
