@@ -14,6 +14,7 @@ assets/css/style.css  样式
 assets/js/main.js     交互、成员岗位列表、报名表配置
 assets/img/           配图（程序生成的原创图片）
 .nojekyll           告诉 GitHub Pages 直接发布静态文件，不经过 Jekyll
+sw.js               清理旧博客遗留的 Service Worker 缓存，之后可删除
 ```
 
 ## 常见修改
