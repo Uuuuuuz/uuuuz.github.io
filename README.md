@@ -28,3 +28,8 @@ sw.js               清理旧博客遗留的 Service Worker 缓存，之后可�
 ```sh
 npx http-server .
 ```
+
+## 部署
+
+仓库 Settings → Pages：Source 选 **Deploy from a branch**，分支 `master`，目录 `/ (root)`。
+往 `master` 推送后，GitHub 会自动重新发布，一般一两分钟生效。
